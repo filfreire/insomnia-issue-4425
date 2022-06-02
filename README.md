@@ -29,17 +29,6 @@ deck sync -s kong.json
 ```
 
 > To clean up containers run `make clean`
-
-## Run
-
-- Import this repository on Insomnia via Git (link to repo is: `https://github.com/filfreire/dino-park-insomnia.git`)
-
-![Insomnia Git Sync image](imgs/git.png)
-
-- If you make changes to the Spec, you can re-run on Insomnia the Declarative config generation (see image bellow), and edit the contents of [kong.json](kong.json) file with the output. Don't forget to re-apply it to your Kong gateway instance by running `deck sync -s kong.json`.
-
-![Declarative configuration for Kong image](imgs/declarative.png)
-
 ## Other
 
 ### Troubleshooting
