@@ -1,0 +1,31 @@
+_id: spc_e7282d67b61f495d9f671d8c5f04d806
+type: ApiSpec
+parentId: wrk_4a8f0b165e8c47e584311802b7732038
+modified: 1654171611084
+created: 1654169920727
+fileName: issue-4425
+contents: |-
+  openapi: 3.0.1
+  info:
+    title: Example spec
+    description: Example spec
+    version: 1.0.0
+
+  servers:
+    - url: http://a.insomnia.rest/
+    - url: http://b.insomnia.rest/
+  paths:
+    /some/path:
+      post:
+        servers:
+          - url: http://c.insomnia.rest/
+            description: test description
+        responses:
+          '200':
+              description: OK
+              content:
+                text/plain:
+                  schema:
+                    type: string
+                    example: pong
+contentType: yaml
