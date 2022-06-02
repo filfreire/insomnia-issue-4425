@@ -1,0 +1,53 @@
+{
+    "_format_version": "1.1",
+    "services": [
+        {
+            "name": "Example_spec",
+            "protocol": "http",
+            "host": "Example_spec.upstream",
+            "port": 80,
+            "path": "/",
+            "plugins": [],
+            "routes": [
+                {
+                    "tags": [
+                        "OAS3_import"
+                    ],
+                    "name": "Example_spec-some-path-post",
+                    "methods": [
+                        "POST"
+                    ],
+                    "paths": [
+                        "/some/path$"
+                    ],
+                    "strip_path": false
+                }
+            ],
+            "tags": [
+                "OAS3_import"
+            ]
+        }
+    ],
+    "upstreams": [
+        {
+            "name": "Example_spec.upstream",
+            "targets": [
+                {
+                    "target": "a.insomnia.rest:80",
+                    "tags": [
+                        "OAS3_import"
+                    ]
+                },
+                {
+                    "target": "b.insomnia.rest:80",
+                    "tags": [
+                        "OAS3_import"
+                    ]
+                }
+            ],
+            "tags": [
+                "OAS3_import"
+            ]
+        }
+    ]
+}
